@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="static/registerLogin/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'registerLogin/css/style.css') }} ">
+</head>
+<body>
+<div class="main">
+        <section class="signup">
+            <!-- <img src="static/registerLogin/images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" action="">
+                        {{form.hidden_tag()}}
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            {{form.username(class="form-input", placeholder = "Username")}}
+                            {% for error in form.username.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-group">
+                            {{form.email(class="form-input", placeholder = "Email")}}
+                            {% for error in form.email.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-group">
+                            {{form.password(class="form-input", placeholder = "Password")}}
+                            {% for error in form.password.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-group">
+                            {{form.confirm_password(class="form-input", placeholder = "Repeat your password")}}
+                            {% for error in form.confirm_password.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-group">
+                            {{form.submit(class="form-submit", placeholder = "Sign up")}}
+                        </div>
+                    </form>
+                    
+
+<br><br>
+
+                     Have already an account ? <a href="{{ url_for('login') }}" class="loginhere-link">Login here</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename = 'registerLogin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'registerLogin/js/main.js') }}"></script>
+
+</body>
+</html>

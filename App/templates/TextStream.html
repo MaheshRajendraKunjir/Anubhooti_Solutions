@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- For Resposive Device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANUBHOOTI SOLUTIONS</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="static/mainPage/images/fav-icon/icon.png">
+
+
+    <!-- Main style sheet -->
+    <link rel="stylesheet" type="text/css" href="static/mainPage/css/style.css">
+    <!-- responsive style sheet -->
+    <link rel="stylesheet" type="text/css" href="static/mainPage/css/responsive.css">
+
+
+
+</head>
+
+<body>
+    <div id="main">
+        <p id="demo">
+            <h1>Speech To Text</h1>
+
+        </p>
+
+        <div id="inp">
+            Token Key : <input type="text" name="token" id="token">
+            <br>
+            <br>
+            <input type="file" name="uploadFile" id="uploadFile">
+            <br>
+            <br>
+
+            <div id="language">
+                <input type="radio" id="r1" name="language" value="0" , checked> English <br>
+                <input type="radio" id="r2" name="language" value="1"> Hindi <br>
+                <input type="radio" id="r3" name="language" value="2"> Marathi <br>
+            </div>
+            <br>
+            <button id="Click">Submit</button>
+        </div>
+
+        <br>
+        <textarea method="post" id="textInput" name="textInput" value=""></textarea>
+        <br>
+        <audio id="audio1" controls autoplay>
+		<source src="" type="audio/wav">
+	</audio>
+        <br>
+        <br> Email: <input id="Email" type="text" name="EmailID">
+        <button id="MAILClick">sendmail</button>
+        <br>
+
+        <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/stream.js') }}"></script>
+
+    </div>
+</body>
+
+
+
+
+<!-- Js File_________________________________ -->
+
+<!-- j Query -->
+<script type="text/javascript" src="static/mainPage/vendor/jquery.2.2.3.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="static/mainPage/vendor/bootstrap/bootstrap.min.js"></script>
+
+<!-- Vendor js _________ -->
+
+<!-- revolution -->
+<script src="static/mainPage/vendor/revolution/jquery.themepunch.tools.min.js"></script>
+<script src="static/mainPage/vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/revolution/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/revolution/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/revolution/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/revolution/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/revolution/revolution.extension.video.min.js"></script>
+
+<!-- Google map js -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ8VrXgGZ3QSC-0XubNhuB2uKKCwqVaD0&callback=goMap" type="text/javascript"></script>
+<!-- Gmap Helper -->
+<script src="static/mainPage/vendor/gmaps.min.js"></script>
+<!-- owl.carousel -->
+<script type="text/javascript" src="static/mainPage/vendor/owl-carousel/owl.carousel.min.js"></script>
+<!-- mixitUp -->
+<script type="text/javascript" src="static/mainPage/vendor/jquery.mixitup.min.js"></script>
+<!-- Progress Bar js -->
+<script type="text/javascript" src="static/mainPage/vendor/skills-master/jquery.skills.js"></script>
+<!-- Validation -->
+<script type="text/javascript" src="static/mainPage/vendor/contact-form/validate.js"></script>
+<script type="text/javascript" src="static/mainPage/vendor/contact-form/jquery.form.js"></script>
+
+
+<!-- Theme js -->
+<script type="text/javascript" src="static/mainPage/js/theme.js"></script>
+<script type="text/javascript" src="static/mainPage/js/map-script.js"></script>
+
+</html>
+<style>
+    body {
+        text-align: center;
+    }
+    
+    #main {
+        margin: auto;
+        position: absolute;
+        margin: auto;
+        width: 95%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+        vertical-align: middle;
+    }
+    
+    #inp {
+        margin: 16px;
+    }
+    
+    #demo {
+        align-items: center;
+        text-align: center;
+        color: #f40501;
+        float: none;
+    }
+    
+    #token {
+        display: inline-block;
+    }
+    
+    #uploadFile {
+        display: inline-block;
+    }
+    
+    #Click {
+        width: 150px;
+        display: inline-block;
+        background-color: #73AD21;
+        height: 24px;
+        margin: 5px;
+    }
+    
+    #textInput {
+        width: 450px;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 700;
+        height: 250px;
+    }
+    
+    #language {
+        float: inherit;
+        display: inline-flex;
+        font-size: 16px;
+        color: #000000;
+        font-weight: 500;
+        align-items: flex-start;
+        margin: 8px;
+    }
+    
+    #r1,
+    #r2,
+    #r3 {
+        margin-left: 8px;
+        margin-right: 4px;
+    }
+</style>
